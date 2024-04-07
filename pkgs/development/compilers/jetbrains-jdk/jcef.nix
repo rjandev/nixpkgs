@@ -97,11 +97,11 @@ let
 in
 stdenv.mkDerivation rec {
   pname = "jcef-jetbrains";
-  rev = "9f8d4fb20b4658db6b2b6bc08e5dd0d8c7340290";
+  rev = "d3f3f080c4d7e156338aca50d861cfc807495d99";
   # This is the commit number
-  # Currently from the branch: https://github.com/JetBrains/jcef/tree/232
+  # Currently from the branch: https://github.com/JetBrains/jcef/tree/241
   # Run `git rev-list --count HEAD`
-  version = "675";
+  version = "765";
 
   nativeBuildInputs = [ cmake python3 jdk17 git rsync ant ninja strip-nondeterminism stripJavaArchivesHook ];
   buildInputs = [ libX11 libXdamage nss nspr ];
@@ -110,7 +110,7 @@ stdenv.mkDerivation rec {
     owner = "jetbrains";
     repo = "jcef";
     inherit rev;
-    hash = "sha256-8zsgcWl0lZtC1oud5IlkUdeXxJUlHoRfw8t0FrZUQec=";
+    hash = "sha256-n+zwxHkyjkjaFhnYWcDNfsqRZIXzZplZiyeHNExfxKU=";
   };
   cef-bin =
     let
