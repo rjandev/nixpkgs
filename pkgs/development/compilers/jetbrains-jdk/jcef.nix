@@ -115,10 +115,10 @@ stdenv.mkDerivation rec {
   cef-bin =
     let
       # `cef_binary_${CEF_VERSION}_linux64_minimal`, where CEF_VERSION is from $src/CMakeLists.txt
-      name = "cef_binary_111.2.1+g870da30+chromium-111.0.5563.64_${platform}_minimal";
+      name = "cef_binary_122.1.9+gd14e051+chromium-122.0.6261.94_${platform}_minimal";
       hash = {
         "linuxarm64" = "sha256-gCDIfWsysXE8lHn7H+YM3Jag+mdbWwTQpJf0GKdXEVs=";
-        "linux64" = "sha256-r+zXTmDN5s/bYLvbCnHufYdXIqQmCDlbWgs5pdOpLTw=";
+        "linux64" = "sha256-qlutM0IsE1emcMe/3p7kwMIK7ou1rZGvpUkrSMVPnCc=";
       }.${platform};
       urlName = builtins.replaceStrings [ "+" ] [ "%2B" ] name;
     in
